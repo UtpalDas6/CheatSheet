@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Git Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Git Cheat Sheet</h1>
+
+    <h2>Configuring Git:</h2>
+    <pre>
+        <code>
+// Set user name
+git config --global user.name "Your Name"
+
+// Set user email
+git config --global user.email "your_email@example.com"
+
+// View current configuration
+git config --list
+        </code>
+    </pre>
+
+    <h2>Creating a Repository:</h2>
+    <pre>
+        <code>
+// Initialize a new repository
+git init
+
+// Clone a remote repository
+git clone <repository_url>
+        </code>
+    </pre>
+
+    <h2>Basic Git Workflow:</h2>
+    <pre>
+        <code>
+// Check repository status
+git status
+
+// Add changes to the staging area
+git add <file_name>
+
+// Add all changes to the staging area
+git add .
+
+// Commit changes
+git commit -m "Commit message"
+
+// Push changes to a remote repository
+git push origin <branch_name>
+
+// Pull latest changes from a remote repository
+git pull origin <branch_name>
+
+// Fetch latest changes from a remote repository
+git fetch
+
+// Merge changes from a branch
+git merge <branch_name>
+
+// Create a new branch
+git branch <branch_name>
+
+// Switch to a different branch
+git checkout <branch_name>
+
+// Delete a branch
+git branch -d <branch_name>
+
+// View commit history
+git log
+        </code>
+    </pre>
+
+    <h2>Working with Remote Repositories:</h2>
+    <pre>
+        <code>
+// Add a remote repository
+git remote add <remote_name> <repository_url>
+
+// View remote repositories
+git remote -v
+
+// Rename a remote repository
+git remote rename <old_name> <new_name>
+
+// Remove a remote repository
+git remote remove <remote_name>
+        </code>
+    </pre>
+
+    <h2>Branching and Merging:</h2>
+    <pre>
+        <code>
+// Create a new branch and switch to it
+git checkout -b <new_branch>
+
+// Merge a branch into the current branch
+git merge <branch_to_merge>
+
+// Resolve merge conflicts
+git mergetool
+
+// Rebase a branch onto another branch
+git rebase <base_branch>
+
+// Abort a rebase
+git rebase --abort
+
+// Continue a rebase after resolving conflicts
+git rebase --continue
+        </code>
+    </pre>
+
+    <h2>Undoing Changes:</h2>
+    <pre>
+        <code>
+// Discard changes in a file
+git checkout -- <file_name>
+
+// Undo the last commit, keeping changes in the working directory
+git reset HEAD~
+
+// Discard all changes in the working directory
+git reset --hard HEAD
+        </code>
+    </pre>
+
+    <h2>Tagging:</h2>
+    <pre>
+        <code>
+// Create a new tag
+git tag <tag_name>
+
+// Create an annotated tag with a message
+git tag -a <tag_name> -m "Tag message"
+
+// Push tags to a remote repository
+git push origin --tags
+
+// List tags
+git tag
+        </code>
+    </pre>
+</body>
+</html>

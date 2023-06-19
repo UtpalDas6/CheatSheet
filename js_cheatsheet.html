@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Basics Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Basics Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+console.log("Hello, World!");
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+// Declaring variables
+var age;
+let pi;
+const name = "John Smith";
+
+// Assigning values
+age = 25;
+pi = 3.14159;
+
+// Initializing variables
+let count = 0;
+const isTrue = true;
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+// Primitive data types
+let number = 10;
+let string = "Hello";
+let boolean = true;
+let nullValue = null;
+let undefinedValue = undefined;
+
+// Object data type
+let object = {
+    key1: value1,
+    key2: value2
+};
+
+// Array data type
+let array = [1, 2, 3, 4, 5];
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+let sum = 5 + 3;
+let difference = 10 - 4;
+let division = 15 / 2;
+let remainder = 15 % 2;
+let product = 4 * 6;
+
+// Comparison operators
+let isEqual = (5 === 5);
+let isGreater = (10 > 5);
+let isLessThanOrEqual = (15 <= 20);
+
+// Logical operators
+let logicalAnd = true && false;
+let logicalOr = true || false;
+let logicalNot = !true;
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+if (condition) {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+// Switch statement
+let day = 3;
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    default:
+        console.log("Invalid day");
+        break;
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// While loop
+while (condition) {
+    // Code to execute while the condition is true
+}
+
+// For loop
+for (initialization; condition; update) {
+    // Code to execute repeatedly until the condition becomes false
+}
+
+// For...in loop
+let object = {
+    key1: value1,
+    key2: value2
+};
+for (let key in object) {
+    console.log(key + ": " + object[key]);
+}
+
+// For...of loop
+let array = [1, 2, 3, 4, 5];
+for (let element of array) {
+    console.log(element);
+}
+        </code>
+    </pre>
+
+    <h2>Functions:</h2>
+    <pre>
+        <code>
+// Function declaration
+function functionName(parameters) {
+    // Code to execute
+}
+
+// Function expression
+let multiply = function(a, b) {
+    let result = a * b;
+    return result;
+};
+
+// Arrow function
+let divide = (a, b) => {
+    let result = a / b;
+    return result;
+};
+
+// Function call
+functionName(arguments);
+        </code>
+    </pre>
+
+    <h2>Objects:</h2>
+    <pre>
+        <code>
+// Object literal
+let person = {
+    name: "John",
+    age: 25,
+    greet: function() {
+        console.log("Hello, my name is " + this.name);
+    }
+};
+
+// Accessing object properties
+let name = person.name;
+person.age = 30;
+
+// Calling object methods
+person.greet();
+        </code>
+    </pre>
+</body>
+</html>

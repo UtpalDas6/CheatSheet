@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perl Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Perl Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+print "Hello, World!\n";
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+# Declaring variables
+my $name;
+my $age;
+
+# Assigning values
+$name = "John Smith";
+$age = 25;
+
+# Initializing variables
+my $count = 0;
+my $isTrue = 1;
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+# Scalar data types
+my $number = 10;
+my $floatingPoint = 3.14159;
+my $string = "Hello";
+my $boolean = 1;
+
+# Array data type
+my @array = (1, 2, 3, 4, 5);
+
+# Hash data type
+my %hash = (
+    key1 => "value1",
+    key2 => "value2"
+);
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+# Arithmetic operators
+my $sum = 5 + 3;
+my $difference = 10 - 4;
+my $division = 15 / 2;
+my $remainder = 15 % 2;
+my $product = 4 * 6;
+
+# Comparison operators
+my $isEqual = (5 == 5);
+my $isGreater = (10 > 5);
+my $isLessThanOrEqual = (15 <= 20);
+
+# Logical operators
+my $logicalAnd = 1 && 0;
+my $logicalOr = 1 || 0;
+my $logicalNot = !1;
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+# If statement
+if (condition) {
+    # Code to execute if the condition is true
+} else {
+    # Code to execute if the condition is false
+}
+
+# Unless statement
+unless (condition) {
+    # Code to execute if the condition is false
+}
+
+# Switch statement
+my $day = 3;
+given ($day) {
+    when (1) {
+        print "Monday\n";
+    }
+    when (2) {
+        print "Tuesday\n";
+    }
+    when (3) {
+        print "Wednesday\n";
+    }
+    default {
+        print "Invalid day\n";
+    }
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+# While loop
+while (condition) {
+    # Code to execute while the condition is true
+}
+
+# Do-while loop
+do {
+    # Code to execute
+} while (condition);
+
+# For loop
+for (my $i = 0; $i < 10; $i++) {
+    # Code to execute repeatedly until the condition becomes false
+}
+
+# Foreach loop
+foreach my $element (@array) {
+    print "$element\n";
+}
+        </code>
+    </pre>
+
+    <h2>Subroutines:</h2>
+    <pre>
+        <code>
+# Subroutine declaration
+sub functionName {
+    # Code to execute
+}
+
+# Subroutine with parameters
+sub multiply {
+    my ($a, $b) = @_;
+    my $result = $a * $b;
+    return $result;
+}
+
+# Subroutine call
+my $result = functionName(arguments);
+        </code>
+    </pre>
+
+    <h2>Regular Expressions:</h2>
+    <pre>
+        <code>
+# Matching
+if ($string =~ /pattern/) {
+    # Code to execute if the pattern matches
+}
+
+# Substitution
+$string =~ s/pattern/replacement/;
+
+# Splitting
+my @parts = split /delimiter/, $string;
+
+# Joining
+my $newString = join "delimiter", @array;
+        </code>
+    </pre>
+</body>
+</html>

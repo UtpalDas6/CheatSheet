@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swift Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Swift Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+import Swift
+
+print("Hello, World!")
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+// Declaring variables
+var age: Int
+var pi: Double
+var name: String
+
+// Assigning values
+age = 25
+pi = 3.14159
+name = "John Smith"
+
+// Initializing variables
+var count = 0
+let isTrue = true
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+// Basic data types
+var number: Int
+var floatingPoint: Double
+var boolean: Bool
+var text: String
+
+// Collection types
+var array: [Int]
+var dictionary: [String: Int]
+var set: Set<String>
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+let sum = 5 + 3
+let difference = 10 - 4
+let division = 15 / 2
+let remainder = 15 % 2
+let product = 4 * 6
+
+// Comparison operators
+let isEqual = (5 == 5)
+let isGreater = (10 > 5)
+let isLessThanOrEqual = (15 <= 20)
+
+// Logical operators
+let logicalAnd = true && false
+let logicalOr = true || false
+let logicalNot = !true
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+if condition {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+// Switch statement
+let day = 3
+switch day {
+case 1:
+    print("Monday")
+case 2:
+    print("Tuesday")
+case 3:
+    print("Wednesday")
+default:
+    print("Invalid day")
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// For loop
+for initialization; condition; update {
+    // Code to execute repeatedly until the condition becomes false
+}
+
+// While loop
+while condition {
+    // Code to execute while the condition is true
+}
+
+// Repeat-while loop
+repeat {
+    // Code to execute at least once, then repeatedly while the condition is true
+} while condition
+
+// Range loop
+let numbers = [1, 2, 3, 4, 5]
+for number in numbers {
+    print(number)
+}
+        </code>
+    </pre>
+
+    <h2>Functions:</h2>
+    <pre>
+        <code>
+// Function declaration
+func functionName(parameters) {
+    // Code to execute
+}
+
+// Function with return value
+func multiply(a: Int, b: Int) -> Int {
+    let result = a * b
+    return result
+}
+
+// Function call
+functionName(arguments)
+        </code>
+    </pre>
+
+    <h2>Structs:</h2>
+    <pre>
+        <code>
+// Struct declaration
+struct MyStruct {
+    var field1: Int
+    var field2: String
+}
+
+// Creating an instance
+var myStruct = MyStruct(field1: 10, field2: "Hello")
+
+// Accessing struct fields
+let value1 = myStruct.field1
+myStruct.field2 = "World"
+        </code>
+    </pre>
+</body>
+</html>

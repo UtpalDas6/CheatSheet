@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selenium Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selenium Cheat Sheet</h1>
+
+    <h2>Setting up Selenium:</h2>
+    <pre>
+        <code>
+# Install Selenium using pip
+pip install selenium
+
+# Download the appropriate WebDriver for your browser (e.g., ChromeDriver for Chrome)
+# Place the WebDriver executable in your system's PATH
+        </code>
+    </pre>
+
+    <h2>Importing Selenium:</h2>
+    <pre>
+        <code>
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+        </code>
+    </pre>
+
+    <h2>Initializing the WebDriver:</h2>
+    <pre>
+        <code>
+# For Chrome
+driver = webdriver.Chrome()
+
+# For Firefox
+driver = webdriver.Firefox()
+
+# For Edge
+driver = webdriver.Edge()
+
+# For Safari (on macOS)
+driver = webdriver.Safari()
+        </code>
+    </pre>
+
+    <h2>Interacting with Elements:</h2>
+    <pre>
+        <code>
+# Navigating to a URL
+driver.get("https://www.example.com")
+
+# Finding elements
+element = driver.find_element(By.ID, "element_id")
+elements = driver.find_elements(By.CLASS_NAME, "element_class")
+
+# Clicking an element
+element.click()
+
+# Sending keys to an input element
+element.send_keys("Text")
+
+# Pressing special keys
+element.send_keys(Keys.ENTER)
+
+# Getting element text
+text = element.text
+
+# Waiting for an element to be visible
+wait = WebDriverWait(driver, 10)
+element = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "element_selector")))
+        </code>
+    </pre>
+
+    <h2>Working with Windows and Frames:</h2>
+    <pre>
+        <code>
+# Switching to a new window
+driver.switch_to.window(driver.window_handles[1])
+
+# Switching to a frame by index
+driver.switch_to.frame(0)
+
+# Switching to a frame by name or ID
+driver.switch_to.frame("frame_name")
+
+# Switching to the default content
+driver.switch_to.default_content()
+        </code>
+    </pre>
+
+    <h2>Handling Alerts:</h2>
+    <pre>
+        <code>
+# Switching to an alert
+alert = driver.switch_to.alert
+
+# Accepting an alert
+alert.accept()
+
+# Dismissing an alert
+alert.dismiss()
+
+# Getting the alert text
+text = alert.text
+        </code>
+    </pre>
+
+    <h2>Performing Actions:</h2>
+    <pre>
+        <code>
+# Creating an ActionChains object
+actions = webdriver.ActionChains(driver)
+
+# Performing a series of actions
+actions.move_to_element(element1)
+actions.click()
+actions.move_to_element(element2)
+actions.click()
+actions.perform()
+        </code>
+    </pre>
+
+    <h2>Capturing Screenshots:</h2>
+    <pre>
+        <code>
+# Capturing a screenshot
+driver.save_screenshot("screenshot.png")
+        </code>
+    </pre>
+
+    <h2>Closing the WebDriver:</h2>
+    <pre>
+        <code>
+# Closing the current window
+driver.close()
+
+# Quitting the WebDriver
+driver.quit()
+        </code>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AWS Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWS Cheat Sheet</h1>
+
+    <h2>EC2 (Elastic Compute Cloud):</h2>
+    <pre>
+        <code>
+// Launching an EC2 instance
+aws ec2 run-instances --image-id ami-12345678 --instance-type t2.micro --key-name my-key --subnet-id subnet-12345678
+
+// Listing EC2 instances
+aws ec2 describe-instances
+
+// Stopping an EC2 instance
+aws ec2 stop-instances --instance-ids i-12345678
+
+// Terminating an EC2 instance
+aws ec2 terminate-instances --instance-ids i-12345678
+        </code>
+    </pre>
+
+    <h2>S3 (Simple Storage Service):</h2>
+    <pre>
+        <code>
+// Creating an S3 bucket
+aws s3 mb s3://my-bucket
+
+// Uploading a file to an S3 bucket
+aws s3 cp file.txt s3://my-bucket/
+
+// Downloading a file from an S3 bucket
+aws s3 cp s3://my-bucket/file.txt .
+
+// Listing S3 buckets
+aws s3 ls
+
+// Deleting an S3 bucket
+aws s3 rb s3://my-bucket --force
+        </code>
+    </pre>
+
+    <h2>RDS (Relational Database Service):</h2>
+    <pre>
+        <code>
+// Creating an RDS instance
+aws rds create-db-instance --db-instance-identifier my-instance --engine mysql --db-instance-class db.t2.micro --master-username admin --master-user-password password123
+
+// Listing RDS instances
+aws rds describe-db-instances
+
+// Modifying an RDS instance
+aws rds modify-db-instance --db-instance-identifier my-instance --db-instance-class db.t2.small
+
+// Deleting an RDS instance
+aws rds delete-db-instance --db-instance-identifier my-instance --skip-final-snapshot
+        </code>
+    </pre>
+
+    <h2>Lambda:</h2>
+    <pre>
+        <code>
+// Creating a Lambda function
+aws lambda create-function --function-name my-function --runtime python3.9 --role arn:aws:iam::12345678:role/lambda-role --handler lambda_function.lambda_handler --code S3Bucket=my-bucket,S3Key=lambda_function.zip
+
+// Invoking a Lambda function
+aws lambda invoke --function-name my-function --payload '{"key1": "value1", "key2": "value2"}' output.txt
+
+// Updating a Lambda function
+aws lambda update-function-code --function-name my-function --s3-bucket my-bucket --s3-key lambda_function.zip
+
+// Deleting a Lambda function
+aws lambda delete-function --function-name my-function
+        </code>
+    </pre>
+
+    <h2>CloudFormation:</h2>
+    <pre>
+        <code>
+// Creating a CloudFormation stack
+aws cloudformation create-stack --stack-name my-stack --template-body file://template.yaml
+
+// Updating a CloudFormation stack
+aws cloudformation update-stack --stack-name my-stack --template-body file://template.yaml
+
+// Deleting a CloudFormation stack
+aws cloudformation delete-stack --stack-name my-stack
+        </code>
+    </pre>
+
+    <h2>IAM (Identity and Access Management):</h2>
+    <pre>
+        <code>
+// Creating an IAM user
+aws iam create-user --user-name my-user
+
+// Creating an IAM group
+aws iam create-group --group-name my-group
+
+// Attaching an IAM policy to a user
+aws iam attach-user-policy --user-name my-user --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess
+
+// Adding a user to a group
+aws iam add-user-to-group --user-name my-user --group-name my-group
+
+// Deleting an IAM user
+aws iam delete-user --user-name my-user
+
+// Deleting an IAM group
+aws iam delete-group --group-name my-group
+        </code>
+    </pre>
+</body>
+</html>

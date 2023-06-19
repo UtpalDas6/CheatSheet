@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GCP Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>GCP Cheat Sheet</h1>
+
+    <h2>Compute:</h2>
+    <h3>Virtual Machines (VMs):</h3>
+    <pre>
+        <code>
+// Create a VM instance
+gcloud compute instances create INSTANCE_NAME \\
+    --image IMAGE \\
+    --machine-type MACHINE_TYPE \\
+    --zone ZONE
+
+// List VM instances
+gcloud compute instances list
+
+// SSH into a VM instance
+gcloud compute ssh INSTANCE_NAME --zone ZONE
+
+// Start a VM instance
+gcloud compute instances start INSTANCE_NAME --zone ZONE
+
+// Stop a VM instance
+gcloud compute instances stop INSTANCE_NAME --zone ZONE
+        </code>
+    </pre>
+
+    <h3>Managed Instance Groups:</h3>
+    <pre>
+        <code>
+// Create a managed instance group
+gcloud compute instance-groups managed create INSTANCE_GROUP_NAME \\
+    --base-instance-name BASE_INSTANCE_NAME \\
+    --size SIZE \\
+    --template TEMPLATE \\
+    --zone ZONE
+
+// List managed instance groups
+gcloud compute instance-groups managed list
+
+// Update the size of a managed instance group
+gcloud compute instance-groups managed resize INSTANCE_GROUP_NAME \\
+    --size SIZE \\
+    --zone ZONE
+
+// Delete a managed instance group
+gcloud compute instance-groups managed delete INSTANCE_GROUP_NAME \\
+    --zone ZONE
+        </code>
+    </pre>
+
+    <h2>Storage:</h2>
+    <h3>Cloud Storage:</h3>
+    <pre>
+        <code>
+// Create a bucket
+gsutil mb -p PROJECT_ID -c STORAGE_CLASS -l LOCATION gs://BUCKET_NAME
+
+// List buckets
+gsutil ls
+
+// Upload a file to a bucket
+gsutil cp LOCAL_FILE_PATH gs://BUCKET_NAME
+
+// Download a file from a bucket
+gsutil cp gs://BUCKET_NAME/OBJECT_NAME LOCAL_FILE_PATH
+
+// Delete a bucket
+gsutil rm -r gs://BUCKET_NAME
+        </code>
+    </pre>
+
+    <h3>Cloud SQL:</h3>
+    <pre>
+        <code>
+// Create a Cloud SQL instance
+gcloud sql instances create INSTANCE_NAME \\
+    --database-version DATABASE_VERSION \\
+    --tier TIER \\
+    --region REGION
+
+// Connect to a Cloud SQL instance
+gcloud sql connect INSTANCE_NAME
+
+// List Cloud SQL instances
+gcloud sql instances list
+
+// Delete a Cloud SQL instance
+gcloud sql instances delete INSTANCE_NAME
+        </code>
+    </pre>
+
+    <h2>Networking:</h2>
+    <h3>Virtual Private Cloud (VPC):</h3>
+    <pre>
+        <code>
+// Create a VPC network
+gcloud compute networks create NETWORK_NAME
+
+// List VPC networks
+gcloud compute networks list
+
+// Create a subnet within a VPC network
+gcloud compute networks subnets create SUBNET_NAME \\
+    --network NETWORK_NAME \\
+    --region REGION \\
+    --range RANGE
+
+// List subnets within a VPC network
+gcloud compute networks subnets list --network NETWORK_NAME
+
+// Delete a VPC network
+gcloud compute networks delete NETWORK_NAME
+        </code>
+    </pre>
+
+    <h3>Load Balancing:</h3>
+    <pre>
+        <code>
+// Create an HTTP(S) load balancer
+gcloud compute backend-services create SERVICE_NAME \\
+    --global \\
+    --protocol PROTOCOL
+
+// Add backend instances to a load balancer
+gcloud compute backend-services add-backend SERVICE_NAME \\
+    --instance-group INSTANCE_GROUP \\
+    --global \\
+    --balancing-mode BALANCING_MODE \\
+    --max-utilization MAX_UTILIZATION
+
+// List load balancers
+gcloud compute backend-services list
+
+// Delete a load balancer
+gcloud compute backend-services delete SERVICE_NAME \\
+    --global
+        </code>
+    </pre>
+
+    <h2>Identity and Access Management (IAM):</h2>
+    <pre>
+        <code>
+// Grant a role to a user
+gcloud projects add-iam-policy-binding PROJECT_ID \\
+    --member=USER_EMAIL \\
+    --role=ROLE
+
+// List IAM policies
+gcloud projects get-iam-policy PROJECT_ID
+
+// Revoke a role from a user
+gcloud projects remove-iam-policy-binding PROJECT_ID \\
+    --member=USER_EMAIL \\
+    --role=ROLE
+        </code>
+    </pre>
+</body>
+</html>

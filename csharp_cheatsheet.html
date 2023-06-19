@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C# Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>C# Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+// Declaring variables
+int age;
+double pi;
+string name;
+
+// Assigning values
+age = 25;
+pi = 3.14159;
+name = "John Smith";
+
+// Initializing variables
+int count = 0;
+bool isTrue = true;
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+// Value types
+int number;
+double floatingPoint;
+bool boolean;
+string text;
+
+// Reference types
+int[] array;
+List<int> list;
+Dictionary<string, int> dictionary;
+CustomClass customObject;
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+int sum = 5 + 3;
+int difference = 10 - 4;
+double division = 15.0 / 2;
+int remainder = 15 % 2;
+int product = 4 * 6;
+
+// Comparison operators
+bool isEqual = (5 == 5);
+bool isGreater = (10 > 5);
+bool isLessThanOrEqual = (15 <= 20);
+
+// Logical operators
+bool logicalAnd = true && false;
+bool logicalOr = true || false;
+bool logicalNot = !true;
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+if (condition)
+{
+    // Code to execute if the condition is true
+}
+else
+{
+    // Code to execute if the condition is false
+}
+
+// Switch statement
+int day = 3;
+switch (day)
+{
+    case 1:
+        Console.WriteLine("Monday");
+        break;
+    case 2:
+        Console.WriteLine("Tuesday");
+        break;
+    case 3:
+        Console.WriteLine("Wednesday");
+        break;
+    default:
+        Console.WriteLine("Invalid day");
+        break;
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// For loop
+for (int i = 0; i < length; i++)
+{
+    // Code to execute repeatedly until the condition becomes false
+}
+
+// While loop
+while (condition)
+{
+    // Code to execute while the condition is true
+}
+
+// Do-while loop
+do
+{
+    // Code to execute at least once, then repeatedly while the condition is true
+} while (condition);
+
+// Foreach loop
+int[] numbers = { 1, 2, 3, 4, 5 };
+foreach (int number in numbers)
+{
+    Console.WriteLine(number);
+}
+        </code>
+    </pre>
+
+    <h2>Methods:</h2>
+    <pre>
+        <code>
+// Method declaration
+static void MethodName(parameters)
+{
+    // Code to execute
+}
+
+// Method with return value
+static int AddNumbers(int a, int b)
+{
+    int result = a + b;
+    return result;
+}
+
+// Method call
+MethodName(arguments);
+        </code>
+    </pre>
+
+    <h2>Classes and Objects:</h2>
+    <pre>
+        <code>
+// Class declaration
+class MyClass
+{
+    // Fields
+    int field1;
+    string field2;
+
+    // Constructor
+    public MyClass(int fieldValue, string fieldValue2)
+    {
+        field1 = fieldValue;
+        field2 = fieldValue2;
+    }
+
+    // Methods
+    public void MyMethod()
+    {
+        // Code to execute
+    }
+}
+
+// Object creation
+MyClass myObject = new MyClass(10, "Hello");
+
+// Accessing fields
+int value1 = myObject.field1;
+myObject.field2 = "World";
+
+// Calling methods
+myObject.MyMethod();
+        </code>
+    </pre>
+</body>
+</html>

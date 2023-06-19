@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rust Language Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rust Language Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+fn main() {
+    println!("Hello, World!");
+}
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+// Declaring variables
+let age: i32;
+let pi: f64;
+let name: &str;
+
+// Assigning values
+age = 25;
+pi = 3.14159;
+name = "John Smith";
+
+// Initializing variables
+let count = 0;
+let is_true = true;
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+// Scalar data types
+let number: i32;
+let floating_point: f64;
+let boolean: bool;
+let character: char;
+
+// Compound data types
+let array: [i32; 5];
+let slice: &[i32];
+let tuple: (i32, f64, bool);
+let struct_data: StructName;
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+let sum = 5 + 3;
+let difference = 10 - 4;
+let division = 15 / 2;
+let remainder = 15 % 2;
+let product = 4 * 6;
+
+// Comparison operators
+let is_equal = 5 == 5;
+let is_greater = 10 > 5;
+let is_less_than_or_equal = 15 <= 20;
+
+// Logical operators
+let logical_and = true && false;
+let logical_or = true || false;
+let logical_not = !true;
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+if condition {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+// Match statement
+let number = 3;
+match number {
+    1 => println!("One"),
+    2 => println!("Two"),
+    _ => println!("Other"),
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// Loop
+loop {
+    // Code to execute indefinitely
+    break; // to exit the loop
+}
+
+// While loop
+while condition {
+    // Code to execute while the condition is true
+}
+
+// For loop
+for variable in iterable {
+    // Code to execute for each element in the iterable
+}
+
+// Range loop
+for number in 1..=5 {
+    println!("{}", number);
+}
+        </code>
+    </pre>
+
+    <h2>Functions:</h2>
+    <pre>
+        <code>
+// Function declaration
+fn function_name(parameters) {
+    // Code to execute
+}
+
+// Function with return value
+fn multiply(a: i32, b: i32) -> i32 {
+    let result = a * b;
+    result
+}
+
+// Function call
+function_name(arguments);
+        </code>
+    </pre>
+
+    <h2>Structs:</h2>
+    <pre>
+        <code>
+// Struct declaration
+struct MyStruct {
+    field1: i32,
+    field2: String,
+}
+
+// Creating an instance
+let my_struct = MyStruct {
+    field1: 10,
+    field2: String::from("Hello"),
+};
+
+// Accessing struct fields
+let value1 = my_struct.field1;
+my_struct.field2 = String::from("World");
+        </code>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MongoDB Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MongoDB Cheat Sheet</h1>
+
+    <h2>Database Operations:</h2>
+    <pre>
+        <code>
+// Create a database
+use database_name
+
+// Show available databases
+show databases
+
+// Switch to a different database
+use database_name
+
+// Drop a database
+db.dropDatabase()
+        </code>
+    </pre>
+
+    <h2>Collection Operations:</h2>
+    <pre>
+        <code>
+// Create a collection
+db.createCollection("collection_name")
+
+// Show available collections
+show collections
+
+// Drop a collection
+db.collection_name.drop()
+        </code>
+    </pre>
+
+    <h2>Document Operations:</h2>
+    <pre>
+        <code>
+// Insert a document
+db.collection_name.insertOne({key1: value1, key2: value2})
+
+// Insert multiple documents
+db.collection_name.insertMany([{key1: value1, key2: value2}, {key1: value3, key2: value4}])
+
+// Find documents
+db.collection_name.find({key: value})
+
+// Find documents with specific criteria
+db.collection_name.find({$or: [{key1: value1}, {key2: value2}]})
+
+// Update a document
+db.collection_name.updateOne({key: value}, {$set: {new_key: new_value}})
+
+// Update multiple documents
+db.collection_name.updateMany({key: value}, {$set: {new_key: new_value}})
+
+// Delete a document
+db.collection_name.deleteOne({key: value})
+
+// Delete multiple documents
+db.collection_name.deleteMany({key: value})
+        </code>
+    </pre>
+
+    <h2>Query Operators:</h2>
+    <pre>
+        <code>
+// Comparison operators
+$eq: equal to
+$ne: not equal to
+$gt: greater than
+$gte: greater than or equal to
+$lt: less than
+$lte: less than or equal to
+
+// Logical operators
+$and: logical AND
+$or: logical OR
+$not: logical NOT
+
+// Element operators
+$exists: checks if a field exists
+$type: checks the data type of a field
+
+// Array operators
+$in: matches any value in an array
+$nin: does not match any value in an array
+$all: matches arrays that contain all the specified elements
+
+// Regular expression operators
+$regex: matches documents that satisfy a regular expression
+
+// Projection operators
+$project: includes or excludes fields from the result
+        </code>
+    </pre>
+
+    <h2>Indexing:</h2>
+    <pre>
+        <code>
+// Create an index
+db.collection_name.createIndex({key: 1})
+
+// List all indexes
+db.collection_name.getIndexes()
+
+// Drop an index
+db.collection_name.dropIndex({key: 1})
+        </code>
+    </pre>
+
+    <h2>Aggregation:</h2>
+    <pre>
+        <code>
+// Aggregation pipeline stages
+$match: filters documents based on specified criteria
+$group: groups documents by specified keys and performs calculations
+$project: shapes the documents' fields
+$sort: sorts documents based on specified criteria
+$limit: limits the number of documents in the output
+$skip: skips a specified number of documents in the output
+$lookup: performs a left outer join on two collections
+$unwind: deconstructs an array field into multiple documents
+        </code>
+    </pre>
+</body>
+</html>

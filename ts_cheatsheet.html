@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TypeScript Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TypeScript Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+console.log("Hello, World!");
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+// Declaring variables
+let age: number;
+let pi: number;
+let name: string;
+
+// Assigning values
+age = 25;
+pi = 3.14159;
+name = "John Smith";
+
+// Initializing variables
+let count: number = 0;
+let isTrue: boolean = true;
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+// Basic data types
+let number: number;
+let text: string;
+let boolean: boolean;
+let nullValue: null;
+let undefinedValue: undefined;
+
+// Array data type
+let numbers: number[];
+let texts: string[];
+let booleans: boolean[];
+
+// Object data type
+let person: { name: string, age: number };
+
+// Custom type
+type MyType = {
+    field1: string;
+    field2: number;
+};
+
+let myObject: MyType;
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+let sum: number = 5 + 3;
+let difference: number = 10 - 4;
+let division: number = 15 / 2;
+let remainder: number = 15 % 2;
+let product: number = 4 * 6;
+
+// Comparison operators
+let isEqual: boolean = (5 === 5);
+let isGreater: boolean = (10 > 5);
+let isLessThanOrEqual: boolean = (15 <= 20);
+
+// Logical operators
+let logicalAnd: boolean = true && false;
+let logicalOr: boolean = true || false;
+let logicalNot: boolean = !true;
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+if (condition) {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+// Switch statement
+let day: number = 3;
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    default:
+        console.log("Invalid day");
+        break;
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// For loop
+for (let i: number = 0; i < 5; i++) {
+    // Code to execute repeatedly
+}
+
+// While loop
+while (condition) {
+    // Code to execute while the condition is true
+}
+
+// Do...while loop
+do {
+    // Code to execute at least once
+} while (condition);
+
+// For...in loop
+let object = {
+    key1: value1,
+    key2: value2
+};
+for (let key in object) {
+    console.log(key + ": " + object[key]);
+}
+
+// For...of loop
+let array = [1, 2, 3, 4, 5];
+for (let element of array) {
+    console.log(element);
+}
+        </code>
+    </pre>
+
+    <h2>Functions:</h2>
+    <pre>
+        <code>
+// Function declaration
+function functionName(parameters: type): returnType {
+    // Code to execute
+    return value;
+}
+
+// Function expression
+let multiply = function(a: number, b: number): number {
+    let result: number = a * b;
+    return result;
+};
+
+// Arrow function
+let divide = (a: number, b: number): number => {
+    let result: number = a / b;
+    return result;
+};
+
+// Optional and default parameters
+function greet(name: string, greeting?: string = "Hello") {
+    console.log(greeting + ", " + name);
+}
+
+// Function call
+functionName(arguments);
+        </code>
+    </pre>
+
+    <h2>Classes:</h2>
+    <pre>
+        <code>
+class MyClass {
+    property: number;
+
+    constructor(property: number) {
+        this.property = property;
+    }
+
+    method() {
+        console.log("Value: " + this.property);
+    }
+}
+
+let myObject = new MyClass(10);
+myObject.method();
+        </code>
+    </pre>
+</body>
+</html>

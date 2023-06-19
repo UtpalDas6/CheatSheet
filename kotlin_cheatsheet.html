@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kotlin Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kotlin Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+fun main() {
+    println("Hello, World!")
+}
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+// Immutable variable
+val name: String = "John Smith"
+
+// Mutable variable
+var age: Int = 25
+
+// Type inference
+val pi = 3.14159
+
+// Nullable variable
+var nullableValue: String? = null
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+// Numeric types
+val number: Int = 10
+val floatingPoint: Double = 3.14
+
+// Boolean type
+val boolean: Boolean = true
+
+// Character type
+val char: Char = 'A'
+
+// String type
+val text: String = "Hello"
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+val sum = 5 + 3
+val difference = 10 - 4
+val division = 15 / 2
+val remainder = 15 % 2
+val product = 4 * 6
+
+// Comparison operators
+val isEqual = (5 == 5)
+val isGreater = (10 > 5)
+val isLessThanOrEqual = (15 <= 20)
+
+// Logical operators
+val logicalAnd = true && false
+val logicalOr = true || false
+val logicalNot = !true
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+if (condition) {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+// When expression
+val day = 3
+when (day) {
+    1 -> println("Monday")
+    2 -> println("Tuesday")
+    3 -> println("Wednesday")
+    else -> println("Invalid day")
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// For loop
+for (i in 1..5) {
+    println(i)
+}
+
+// While loop
+var count = 0
+while (count < 5) {
+    println(count)
+    count++
+}
+
+// Do-While loop
+var index = 0
+do {
+    println(index)
+    index++
+} while (index < 5)
+        </code>
+    </pre>
+
+    <h2>Functions:</h2>
+    <pre>
+        <code>
+// Function declaration
+fun functionName(parameters) {
+    // Code to execute
+}
+
+// Function with return value
+fun multiply(a: Int, b: Int): Int {
+    val result = a * b
+    return result
+}
+
+// Function call
+functionName(arguments)
+        </code>
+    </pre>
+
+    <h2>Classes:</h2>
+    <pre>
+        <code>
+// Class declaration
+class MyClass {
+    // Properties
+    var name: String = ""
+    var age: Int = 0
+
+    // Member function
+    fun greet() {
+        println("Hello, my name is $name")
+    }
+}
+
+// Creating an instance
+val myObject = MyClass()
+
+// Accessing class members
+myObject.name = "John"
+myObject.age = 25
+myObject.greet()
+        </code>
+    </pre>
+</body>
+</html>

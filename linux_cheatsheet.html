@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Linux Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Linux Cheat Sheet</h1>
+
+    <h2>File and Directory Operations:</h2>
+    <pre>
+        <code>
+# List files and directories
+ls
+ls -l
+ls -a
+ls -la
+
+# Change directory
+cd directory_path
+
+# Create directory
+mkdir directory_name
+
+# Create empty file
+touch file_name
+
+# Copy file or directory
+cp source_path destination_path
+
+# Move file or directory
+mv source_path destination_path
+
+# Remove file
+rm file_path
+
+# Remove directory (empty)
+rmdir directory_path
+
+# Remove directory (recursive)
+rm -r directory_path
+        </code>
+    </pre>
+
+    <h2>File Permissions:</h2>
+    <pre>
+        <code>
+# Change file permissions
+chmod permissions file_path
+
+# Symbolic notation
+chmod u+x file_path
+chmod g+w file_path
+chmod o-r file_path
+
+# Numeric notation
+chmod 755 file_path
+chmod 644 file_path
+        </code>
+    </pre>
+
+    <h2>File Editing:</h2>
+    <pre>
+        <code>
+# Open file with default text editor
+nano file_path
+
+# Open file with Vi editor
+vi file_path
+
+# Exit Vi editor (command mode)
+:wq
+        </code>
+    </pre>
+
+    <h2>Process Management:</h2>
+    <pre>
+        <code>
+# List running processes
+ps
+
+# Terminate process by ID
+kill process_id
+
+# Terminate process by name
+pkill process_name
+        </code>
+    </pre>
+
+    <h2>File Compression and Archiving:</h2>
+    <pre>
+        <code>
+# Create ZIP archive
+zip archive.zip file1 file2 directory
+
+# Extract ZIP archive
+unzip archive.zip
+
+# Create TAR archive
+tar -cvf archive.tar file1 file2 directory
+
+# Extract TAR archive
+tar -xvf archive.tar
+        </code>
+    </pre>
+
+    <h2>Network Operations:</h2>
+    <pre>
+        <code>
+# Check IP address
+ifconfig
+
+# Ping a host
+ping host
+
+# Connect to a remote host (SSH)
+ssh username@host
+
+# Download file from URL
+wget file_url
+        </code>
+    </pre>
+
+    <h2>System Information:</h2>
+    <pre>
+        <code>
+# Display system information
+uname -a
+
+# Display disk usage
+df -h
+
+# Display memory usage
+free -h
+
+# Display CPU information
+cat /proc/cpuinfo
+
+# Display available RAM
+cat /proc/meminfo
+        </code>
+    </pre>
+</body>
+</html>

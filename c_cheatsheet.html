@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C Programming Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>C Programming Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+// Variable declaration
+int age;
+float pi;
+char letter;
+
+// Variable initialization
+age = 25;
+pi = 3.14159;
+letter = 'A';
+
+// Variable declaration and initialization
+int count = 0;
+float value = 10.5;
+char symbol = '#';
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+// Basic data types
+int number;
+float floatingPoint;
+char character;
+
+// Array data type
+int array[5];
+
+// String data type
+char string[10];
+
+// Pointer data type
+int *ptr;
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+int sum = 5 + 3;
+int difference = 10 - 4;
+float division = 15 / 2;
+int remainder = 15 % 2;
+int product = 4 * 6;
+
+// Assignment operators
+int value = 10;
+value += 5;
+value -= 3;
+value *= 2;
+value /= 4;
+value %= 3;
+
+// Comparison operators
+int isEqual = (5 == 5);
+int isGreater = (10 > 5);
+int isLessThanOrEqual = (15 <= 20);
+
+// Logical operators
+int logicalAnd = (1 && 0);
+int logicalOr = (1 || 0);
+int logicalNot = !1;
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+int condition = 1;
+if (condition) {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+// Switch statement
+int day = 3;
+switch (day) {
+    case 1:
+        printf("Monday\n");
+        break;
+    case 2:
+        printf("Tuesday\n");
+        break;
+    case 3:
+        printf("Wednesday\n");
+        break;
+    default:
+        printf("Invalid day\n");
+        break;
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// For loop
+for (int i = 0; i < 5; i++) {
+    // Code to execute repeatedly until the condition becomes false
+}
+
+// While loop
+int count = 0;
+while (count < 10) {
+    // Code to execute while the condition is true
+    count++;
+}
+
+// Do-while loop
+int number = 0;
+do {
+    // Code to execute at least once
+    number++;
+} while (number < 5);
+        </code>
+    </pre>
+
+    <h2>Functions:</h2>
+    <pre>
+        <code>
+// Function declaration
+int functionName(int parameter1, float parameter2) {
+    // Code to execute
+    return 0;
+}
+
+// Function call
+int result = functionName(value1, value2);
+        </code>
+    </pre>
+
+    <h2>Arrays:</h2>
+    <pre>
+        <code>
+// Array declaration and initialization
+int numbers[5] = {1, 2, 3, 4, 5};
+
+// Accessing array elements
+int firstNumber = numbers[0];
+numbers[2] = 10;
+        </code>
+    </pre>
+</body>
+</html>

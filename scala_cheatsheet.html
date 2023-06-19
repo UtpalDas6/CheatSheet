@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scala Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scala Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+object HelloWorld {
+    def main(args: Array[String]): Unit = {
+        println("Hello, World!")
+    }
+}
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+// Mutable variable
+var age: Int = 25
+
+// Immutable variable
+val pi: Double = 3.14159
+
+// Type inference
+val name = "John Smith"
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+// Numeric types
+val number: Int = 10
+val floatingPoint: Double = 3.14
+
+// Boolean type
+val isTrue: Boolean = true
+
+// String type
+val text: String = "Hello, World!"
+
+// Collection types
+val array: Array[Int] = Array(1, 2, 3, 4, 5)
+val list: List[Int] = List(1, 2, 3, 4, 5)
+val set: Set[Int] = Set(1, 2, 3, 4, 5)
+val map: Map[String, Int] = Map("key1" -> 1, "key2" -> 2)
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+val sum: Int = 5 + 3
+val difference: Int = 10 - 4
+val division: Double = 15 / 2
+val remainder: Int = 15 % 2
+val product: Int = 4 * 6
+
+// Comparison operators
+val isEqual: Boolean = 5 == 5
+val isGreater: Boolean = 10 > 5
+val isLessThanOrEqual: Boolean = 15 <= 20
+
+// Logical operators
+val logicalAnd: Boolean = true && false
+val logicalOr: Boolean = true || false
+val logicalNot: Boolean = !true
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+val condition: Boolean = true
+if (condition) {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+// Match expression
+val day: Int = 3
+day match {
+    case 1 => println("Monday")
+    case 2 => println("Tuesday")
+    case 3 => println("Wednesday")
+    case _ => println("Invalid day")
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// For loop
+for (i <- 1 to 5) {
+    println(i)
+}
+
+// While loop
+var count: Int = 0
+while (count < 5) {
+    println(count)
+    count += 1
+}
+
+// Do-while loop
+var count: Int = 0
+do {
+    println(count)
+    count += 1
+} while (count < 5)
+
+// Foreach loop
+val numbers: List[Int] = List(1, 2, 3, 4, 5)
+numbers.foreach { number =>
+    println(number)
+}
+        </code>
+    </pre>
+
+    <h2>Functions:</h2>
+    <pre>
+        <code>
+// Function declaration
+def functionName(parameters: Type): ReturnType = {
+    // Code to execute
+}
+
+// Function with return type inference
+def add(a: Int, b: Int) = a + b
+
+// Function call
+val result: Int = functionName(arguments)
+        </code>
+    </pre>
+
+    <h2>Classes and Objects:</h2>
+    <pre>
+        <code>
+// Class declaration
+class MyClass {
+    // Class fields
+    var myField: Int = 0
+
+    // Class methods
+    def myMethod(): Unit = {
+        println("My method")
+    }
+}
+
+// Object declaration (Singleton)
+object MyObject {
+    // Object fields
+    val myField: Int = 10
+
+    // Object methods
+    def myMethod(): Unit = {
+        println("My method")
+    }
+}
+
+// Creating an instance of a class
+val myObject: MyClass = new MyClass()
+
+// Accessing class fields and methods
+myObject.myField = 5
+myObject.myMethod()
+
+// Accessing object fields and methods
+val value: Int = MyObject.myField
+MyObject.myMethod()
+        </code>
+    </pre>
+</body>
+</html>

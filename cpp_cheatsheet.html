@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C++ Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>C++ Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+// Declaring variables
+int age;
+double pi;
+std::string name;
+
+// Assigning values
+age = 25;
+pi = 3.14159;
+name = "John Smith";
+
+// Initializing variables
+int count = 0;
+bool isTrue = true;
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+// Fundamental data types
+int number;
+double floatingPoint;
+char character;
+bool boolean;
+std::string text;
+
+// Arrays
+int array[5];
+double matrix[3][3];
+
+// Pointers
+int* pointer;
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+int sum = 5 + 3;
+int difference = 10 - 4;
+double division = 15.0 / 2;
+int remainder = 15 % 2;
+int product = 4 * 6;
+
+// Comparison operators
+bool isEqual = (5 == 5);
+bool isGreater = (10 > 5);
+bool isLessThanOrEqual = (15 <= 20);
+
+// Logical operators
+bool logicalAnd = true && false;
+bool logicalOr = true || false;
+bool logicalNot = !true;
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+if (condition) {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+// Switch statement
+int day = 3;
+switch (day) {
+    case 1:
+        std::cout << "Monday" << std::endl;
+        break;
+    case 2:
+        std::cout << "Tuesday" << std::endl;
+        break;
+    case 3:
+        std::cout << "Wednesday" << std::endl;
+        break;
+    default:
+        std::cout << "Invalid day" << std::endl;
+        break;
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// For loop
+for (int i = 0; i < 5; i++) {
+    // Code to execute repeatedly until the condition becomes false
+}
+
+// While loop
+while (condition) {
+    // Code to execute while the condition is true
+}
+
+// Do-while loop
+do {
+    // Code to execute at least once, then repeat while the condition is true
+} while (condition);
+
+// Range-based for loop
+int numbers[] = {1, 2, 3, 4, 5};
+for (int number : numbers) {
+    std::cout << number << std::endl;
+}
+        </code>
+    </pre>
+
+    <h2>Functions:</h2>
+    <pre>
+        <code>
+// Function declaration
+void functionName(parameters) {
+    // Code to execute
+}
+
+// Function with return value
+int multiply(int a, int b) {
+    int result = a * b;
+    return result;
+}
+
+// Function call
+functionName(arguments);
+        </code>
+    </pre>
+
+    <h2>Classes:</h2>
+    <pre>
+        <code>
+// Class declaration
+class MyClass {
+public:
+    // Member variables
+    int number;
+
+    // Member functions
+    void printNumber() {
+        std::cout << number << std::endl;
+    }
+};
+
+// Creating an instance
+MyClass myObject;
+
+// Accessing class members
+myObject.number = 10;
+myObject.printNumber();
+        </code>
+    </pre>
+</body>
+</html>

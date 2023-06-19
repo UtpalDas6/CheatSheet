@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java Basics Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Java Basics Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+        </code>
+    </pre>
+
+    <h2>Variables and Data Types:</h2>
+    <pre>
+        <code>
+// Declaring variables
+int age;
+double pi;
+String name;
+
+// Assigning values
+age = 25;
+pi = 3.14159;
+name = "John Smith";
+
+// Initializing variables
+int count = 0;
+boolean isTrue = true;
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+int sum = 5 + 3;
+int difference = 10 - 4;
+double division = 15 / 2;
+int remainder = 15 % 2;
+int product = 4 * 6;
+
+// Relational operators
+boolean isEqual = (5 == 5);
+boolean isGreater = (10 > 5);
+boolean isLessThanOrEqual = (15 <= 20);
+
+// Logical operators
+boolean logicalAnd = true &amp;&amp; false;
+boolean logicalOr = true || false;
+boolean logicalNot = !true;
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+if (condition) {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+// Switch statement
+int day = 3;
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday");
+        break;
+    default:
+        System.out.println("Invalid day");
+        break;
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// While loop
+while (condition) {
+    // Code to execute while the condition is true
+}
+
+// For loop
+for (initialization; condition; update) {
+    // Code to execute repeatedly until the condition becomes false
+}
+
+// Enhanced for loop (for-each loop)
+int[] numbers = {1, 2, 3, 4, 5};
+for (int number : numbers) {
+    System.out.println(number);
+}
+        </code>
+    </pre>
+
+    <h2>Arrays:</h2>
+    <pre>
+        <code>
+// Declaring and initializing an array
+int[] numbers = new int[5];
+
+// Assigning values to an array
+numbers[0] = 1;
+numbers[1] = 2;
+numbers[2] = 3;
+numbers[3] = 4;
+numbers[4] = 5;
+
+// Accessing array elements
+int firstElement = numbers[0];
+
+// Array length
+int length = numbers.length;
+        </code>
+    </pre>
+
+    <h2>Methods:</h2>
+    <pre>
+        <code>
+// Method declaration
+public static void methodName() {
+    // Code to execute
+}
+
+// Method with parameters
+public static void sum(int a, int b) {
+    int result = a + b;
+    System.out.println("Sum: " + result);
+}
+
+// Method with return value
+public static int multiply(int a, int b) {
+    int result = a * b;
+    return result;
+}
+        </code>
+    </pre>
+
+    <h2>Object-Oriented Programming:</h2>
+    <pre>
+        <code>
+// Class definition
+public class MyClass {
+    // Instance variables
+    private int myVariable;
+
+    // Constructor
+    public MyClass(int myVariable) {
+        this.myVariable = myVariable;
+    }
+
+    // Instance method
+    public void myMethod() {
+        // Code to execute
+    }
+
+    // Getters and setters
+    public int getMyVariable() {
+        return myVariable;
+    }
+
+    public void setMyVariable(int myVariable) {
+        this.myVariable = myVariable;
+    }
+}
+        </code>
+    </pre>
+</body>
+</html>

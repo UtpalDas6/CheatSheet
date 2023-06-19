@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PHP Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+&lt;?php
+echo "Hello, World!";
+?&gt;
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+// Declaring variables
+$age;
+$name;
+
+// Assigning values
+$age = 25;
+$name = "John Smith";
+
+// Initializing variables
+$count = 0;
+$isTrue = true;
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+// Basic data types
+$number = 10;
+$text = "Hello";
+$boolean = true;
+$nullValue = null;
+
+// Array data type
+$array = array(1, 2, 3, 4, 5);
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+$sum = 5 + 3;
+$difference = 10 - 4;
+$division = 15 / 2;
+$remainder = 15 % 2;
+$product = 4 * 6;
+
+// Comparison operators
+$isEqual = (5 == 5);
+$isGreater = (10 > 5);
+$isLessThanOrEqual = (15 <= 20);
+
+// Logical operators
+$logicalAnd = true && false;
+$logicalOr = true || false;
+$logicalNot = !true;
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+if (condition) {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+// Switch statement
+$day = 3;
+switch ($day) {
+    case 1:
+        echo "Monday";
+        break;
+    case 2:
+        echo "Tuesday";
+        break;
+    case 3:
+        echo "Wednesday";
+        break;
+    default:
+        echo "Invalid day";
+        break;
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// For loop
+for ($i = 0; $i < 5; $i++) {
+    // Code to execute repeatedly until the condition becomes false
+}
+
+// While loop
+while (condition) {
+    // Code to execute while the condition is true
+}
+
+// Do-while loop
+do {
+    // Code to execute at least once, then repeatedly while the condition is true
+} while (condition);
+
+// Foreach loop
+$numbers = array(1, 2, 3, 4, 5);
+foreach ($numbers as $value) {
+    echo $value;
+}
+        </code>
+    </pre>
+
+    <h2>Functions:</h2>
+    <pre>
+        <code>
+// Function declaration
+function functionName(parameters) {
+    // Code to execute
+}
+
+// Function with return value
+function multiply($a, $b) {
+    $result = $a * $b;
+    return $result;
+}
+
+// Function call
+functionName(arguments);
+        </code>
+    </pre>
+
+    <h2>Arrays:</h2>
+    <pre>
+        <code>
+// Indexed array
+$colors = array("Red", "Green", "Blue");
+
+// Associative array
+$person = array("name" => "John", "age" => 25);
+
+// Accessing array elements
+$element = $colors[0];
+$person["name"] = "Jane";
+
+// Array functions
+$count = count($colors);
+$sortedArray = sort($colors);
+        </code>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQL Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SQL Cheat Sheet</h1>
+
+    <h2>Create Table:</h2>
+    <pre>
+        <code>
+CREATE TABLE table_name (
+    column1 datatype1 constraint1,
+    column2 datatype2 constraint2,
+    ...
+);
+        </code>
+    </pre>
+
+    <h2>Insert Data:</h2>
+    <pre>
+        <code>
+INSERT INTO table_name (column1, column2, ...)
+VALUES (value1, value2, ...);
+        </code>
+    </pre>
+
+    <h2>Select Data:</h2>
+    <pre>
+        <code>
+SELECT column1, column2, ...
+FROM table_name;
+        </code>
+    </pre>
+
+    <h2>Filtering Data:</h2>
+    <pre>
+        <code>
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+        </code>
+    </pre>
+
+    <h2>Update Data:</h2>
+    <pre>
+        <code>
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+        </code>
+    </pre>
+
+    <h2>Delete Data:</h2>
+    <pre>
+        <code>
+DELETE FROM table_name
+WHERE condition;
+        </code>
+    </pre>
+
+    <h2>Sorting Data:</h2>
+    <pre>
+        <code>
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1 ASC|DESC;
+        </code>
+    </pre>
+
+    <h2>Aggregate Functions:</h2>
+    <pre>
+        <code>
+SELECT COUNT(column) AS count_alias
+FROM table_name;
+
+SELECT SUM(column) AS sum_alias
+FROM table_name;
+
+SELECT AVG(column) AS average_alias
+FROM table_name;
+
+SELECT MIN(column) AS min_alias
+FROM table_name;
+
+SELECT MAX(column) AS max_alias
+FROM table_name;
+        </code>
+    </pre>
+
+    <h2>Joins:</h2>
+    <pre>
+        <code>
+SELECT column1, column2, ...
+FROM table1
+JOIN table2 ON table1.column = table2.column;
+        </code>
+    </pre>
+
+    <h2>Group By:</h2>
+    <pre>
+        <code>
+SELECT column1, COUNT(column2) AS count_alias
+FROM table_name
+GROUP BY column1;
+        </code>
+    </pre>
+
+    <h2>Having:</h2>
+    <pre>
+        <code>
+SELECT column1, COUNT(column2) AS count_alias
+FROM table_name
+GROUP BY column1
+HAVING count_alias &gt; 5;
+        </code>
+    </pre>
+
+    <h2>Constraints:</h2>
+    <pre>
+        <code>
+CREATE TABLE table_name (
+    column1 datatype1 NOT NULL,
+    column2 datatype2 UNIQUE,
+    column3 datatype3 PRIMARY KEY,
+    column4 datatype4 REFERENCES table2(column),
+    ...
+);
+        </code>
+    </pre>
+</body>
+</html>

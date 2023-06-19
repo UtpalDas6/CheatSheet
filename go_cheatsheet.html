@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Go Language Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Go Language Cheat Sheet</h1>
+
+    <h2>Hello World:</h2>
+    <pre>
+        <code>
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+        </code>
+    </pre>
+
+    <h2>Variables:</h2>
+    <pre>
+        <code>
+// Declaring variables
+var age int
+var pi float64
+var name string
+
+// Assigning values
+age = 25
+pi = 3.14159
+name = "John Smith"
+
+// Initializing variables
+count := 0
+isTrue := true
+        </code>
+    </pre>
+
+    <h2>Data Types:</h2>
+    <pre>
+        <code>
+// Basic data types
+var number int
+var floatingPoint float64
+var boolean bool
+var text string
+
+// Composite data types
+var array []int
+var slice []int
+var mapData map[string]int
+var structData struct {
+    field1 int
+    field2 string
+}
+        </code>
+    </pre>
+
+    <h2>Operators:</h2>
+    <pre>
+        <code>
+// Arithmetic operators
+sum := 5 + 3
+difference := 10 - 4
+division := 15 / 2
+remainder := 15 % 2
+product := 4 * 6
+
+// Comparison operators
+isEqual := (5 == 5)
+isGreater := (10 > 5)
+isLessThanOrEqual := (15 <= 20)
+
+// Logical operators
+logicalAnd := true && false
+logicalOr := true || false
+logicalNot := !true
+        </code>
+    </pre>
+
+    <h2>Conditional Statements:</h2>
+    <pre>
+        <code>
+// If statement
+if condition {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+
+// Switch statement
+day := 3
+switch day {
+case 1:
+    fmt.Println("Monday")
+case 2:
+    fmt.Println("Tuesday")
+case 3:
+    fmt.Println("Wednesday")
+default:
+    fmt.Println("Invalid day")
+}
+        </code>
+    </pre>
+
+    <h2>Loops:</h2>
+    <pre>
+        <code>
+// For loop
+for initialization; condition; update {
+    // Code to execute repeatedly until the condition becomes false
+}
+
+// While loop
+for condition {
+    // Code to execute while the condition is true
+}
+
+// Infinite loop
+for {
+    // Code to execute indefinitely
+    break // to exit the loop
+}
+
+// Range loop
+numbers := []int{1, 2, 3, 4, 5}
+for index, value := range numbers {
+    fmt.Println(index, value)
+}
+        </code>
+    </pre>
+
+    <h2>Functions:</h2>
+    <pre>
+        <code>
+// Function declaration
+func functionName(parameters) {
+    // Code to execute
+}
+
+// Function with return value
+func multiply(a, b int) int {
+    result := a * b
+    return result
+}
+
+// Function call
+functionName(arguments)
+        </code>
+    </pre>
+
+    <h2>Structs:</h2>
+    <pre>
+        <code>
+// Struct declaration
+type MyStruct struct {
+    field1 int
+    field2 string
+}
+
+// Creating an instance
+myStruct := MyStruct{
+    field1: 10,
+    field2: "Hello",
+}
+
+// Accessing struct fields
+value1 := myStruct.field1
+myStruct.field2 = "World"
+        </code>
+    </pre>
+</body>
+</html>
